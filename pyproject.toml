@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "django-dummy-database"
-version = "1.0.0"
+version = "1.0.1"
 description = "A fully-featured dummy database backend for Django that allows running all standard Django apps without a real database"
 readme = "README.md"
 authors = [
@@ -48,7 +48,7 @@ dependencies = [
 "Documentation" = "https://github.com/MagIlyasDOMA/django-dummy-database#readme"
 
 [project.entry-points."django.backends"]
-dummy = "django_dummy_database.backend"
+dummy = "dummy_database.backend"
 
 [tool.setuptools.packages.find]
-include = ["django_dummy_database*"]
+include = ["dummy_database*"]
