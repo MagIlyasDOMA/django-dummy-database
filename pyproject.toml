@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-dummy-database"
+version = "1.0.0"
+description = "A fully-featured dummy database backend for Django that allows running all standard Django apps without a real database"
+readme = "README.md"
+authors = [
+    {name = "Маг Ильяс DOMA (MagIlyasDOMA)", email = "magilyas.doma.09@list.ru"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Framework :: Django :: 5.2",
+    "Framework :: Django :: 6.0",
+]
+keywords = ["django", "database", "dummy", "mock", "testing", "in-memory"]
+requires-python = ">=3.8"
+dependencies = [
+    "Django>=3.2",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/MagIlyasDOMA/django-dummy-database"
+"Bug Reports" = "https://github.com/MagIlyasDOMA/django-dummy-database/issues"
+"Source" = "https://github.com/MagIlyasDOMA/django-dummy-database"
+"Documentation" = "https://github.com/MagIlyasDOMA/django-dummy-database#readme"
+
+[project.entry-points."django.backends"]
+dummy = "django_dummy_database.backend"
+
+[tool.setuptools.packages.find]
+include = ["django_dummy_database*"]
